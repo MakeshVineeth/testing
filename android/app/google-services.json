@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "610954968866",
+    "project_id": "anchal-project",
+    "storage_bucket": "anchal-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610954968866:android:58ec2ae079b11d95256f7b",
+        "android_client_info": {
+          "package_name": "com.kosidev.mentalHealthCareApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610954968866-8f396j8h7l7s2lkncdt7mi58s68shsfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-tV83-Bih77RoYm4846sCyUNmdu6bXv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610954968866-8f396j8h7l7s2lkncdt7mi58s68shsfd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "610954968866-23m3h5vnruem6ejn2ppisj4quaq4itgh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mentalHealthCareApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
