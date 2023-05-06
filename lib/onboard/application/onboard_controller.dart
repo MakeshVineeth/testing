@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class OnboardingController extends GetxController {
-  late PageController pageController;
+  late PageController pageController = PageController();
 
   @override
   void onReady() {

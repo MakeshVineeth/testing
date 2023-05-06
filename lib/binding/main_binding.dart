@@ -19,12 +19,13 @@ class MainBinding extends Bindings {
   }
 
   @override
-  Future<void> dependencies() async {
+  void dependencies() async {
     await initializeFirebase();
-    Get.put<AuthController>(AuthController(), permanent: true);
-    Get.put<OnboardingController>(OnboardingController());
-    Get.put<CustomNavigationController>(CustomNavigationController());
-    Get.put<AdmissionController>(AdmissionController());
-    Get.put<MakeAppointmentController>(MakeAppointmentController());
+
+    await Get.put<AuthController>(AuthController(), permanent: true);
+    await Get.put<OnboardingController>(OnboardingController());
+    await Get.put<CustomNavigationController>(CustomNavigationController());
+    await Get.put<AdmissionController>(AdmissionController());
+    await Get.put<MakeAppointmentController>(MakeAppointmentController());
   }
 }

@@ -18,106 +18,110 @@ class OnboardTemplate extends StatelessWidget {
       required this.buttonText,
       required this.subTitle1,
       required this.subTitle2,
-      required this.onPressed, required this.skipBtnPressed})
+      required this.onPressed,
+      required this.skipBtnPressed})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(18.0),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              GestureDetector(
-                onTap: skipBtnPressed,
-                child: Text(
-                  CustomText.skipText,
-                  textAlign: TextAlign.right,
-                  style: Theme.of(context).textTheme.displaySmall,
+      child: SingleChildScrollView(
+        physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: skipBtnPressed,
+                  child: Text(
+                    CustomText.skipText,
+                    textAlign: TextAlign.right,
+                    style: Theme.of(context).textTheme.displaySmall,
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 26.0),
+            Container(
+              height: 450.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(image),
+                  fit: BoxFit.cover,
                 ),
-              )
-            ],
-          ),
-          SizedBox(height: 26.0),
-          Container(
-            height: 450.0,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(image),
-                fit: BoxFit.cover,
+                borderRadius: BorderRadius.circular(10.0),
               ),
-              borderRadius: BorderRadius.circular(10.0),
             ),
-          ),
-          SizedBox(
-            height: 18.0,
-          ),
-          SmoothPageIndicator(
-            controller: pageController,
-            count: 3,
-            effect: WormEffect(
-              dotWidth: 10.0,
-              dotHeight: 10.0,
-              activeDotColor: AppColors.mentalBrandColor,
+            SizedBox(
+              height: 18.0,
             ),
-            onDotClicked: (index) {
-              pageController.animateToPage(
-                index,
-                duration: Duration(milliseconds: 300),
-                curve: Curves.easeIn,
-              );
-            },
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 128.0, top: 44.0),
-            child: RichText(
-              text: TextSpan(
-                text: subTitle1,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22.0,
-                  color: AppColors.mentalOnboardTextColor,
+            SmoothPageIndicator(
+              controller: pageController,
+              count: 3,
+              effect: WormEffect(
+                dotWidth: 10.0,
+                dotHeight: 10.0,
+                activeDotColor: AppColors.mentalBrandColor,
+              ),
+              onDotClicked: (index) {
+                pageController.animateToPage(
+                  index,
+                  duration: Duration(milliseconds: 300),
+                  curve: Curves.easeIn,
+                );
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 128.0, top: 44.0),
+              child: RichText(
+                text: TextSpan(
+                  text: subTitle1,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22.0,
+                    color: AppColors.mentalOnboardTextColor,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: subTitle2,
+                      style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                            fontSize: 22.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                  ],
                 ),
-                children: [
-                  TextSpan(
-                    text: subTitle2,
-                    style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.bold,
+              ),
+            ),
+            // SizedBox(height: 60.0),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+            GestureDetector(
+              onTap: onPressed,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                padding: EdgeInsets.only(
+                    top: 18.0, left: 18.0, right: 18.0, bottom: 18.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30.0),
+                  color: AppColors.mentalBrandColor,
+                ),
+                child: Center(
+                  child: Text(
+                    buttonText,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 20.0,
+                      color: AppColors.mentalBrandLightColor,
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
-          // SizedBox(height: 60.0),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-          GestureDetector(
-            onTap: onPressed,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.only(
-                  top: 18.0, left: 18.0, right: 18.0, bottom: 18.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30.0),
-                color: AppColors.mentalBrandColor,
-              ),
-              child: Center(
-                child: Text(
-                  buttonText,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 20.0,
-                    color: AppColors.mentalBrandLightColor,
-                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
