@@ -52,14 +52,44 @@ class HomeController extends GetxController
     psychologistsList.value = psychologists;
   }
 
-  Future getRealDatas() async {
-    var firebasePsychologists = _db.collection('psychologists').get();
-
+  Future<void> getRealDatas() async {
+    Future<QuerySnapshot<Map<String, dynamic>>> firebasePsychologists =
+        _db.collection('psychologists').get();
     List<PsychologistModel> allPsychologists =
         await firebasePsychologists.then((value) {
-      return value.docs.map((e) {
-        return PsychologistModel.fromMap(e.data(), uid: e.id);
-      }).toList();
+      if (value.size > 0) {
+        return value.docs.map((documentSnap) {
+          if (documentSnap.exists) {
+            return PsychologistModel.fromMap(
+              documentSnap.data(),
+              uid: documentSnap.id,
+            );
+          }
+
+          return PsychologistModel(
+            uid: 'uid',
+            name: 'name',
+            userImage: 'Placeholder.png',
+            experience: 0,
+            star: 0,
+            earlyAdmit: 'earlyAdmit',
+            minAmount: 0,
+            specialization: 'specialization',
+            placeOfWork: 'placeOfWork',
+            country: 'country',
+            currency: 'currency',
+            about: 'about',
+            diplomarAndCertificate: List.empty(),
+            articles: List.empty(),
+            education: 'education',
+            reviews: List.empty(),
+            isOnline: false,
+          );
+        }).toList();
+      } else {
+        debugPrint("Empty data received from Db.");
+        return List.empty();
+      }
     });
 
     print(allPsychologists);
