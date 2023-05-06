@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:mental_health_care_app/consultations/model/appoinment_model.dart';
 
 class ConsultationController extends GetxController {
@@ -14,23 +15,24 @@ class ConsultationController extends GetxController {
 
   get getFilter => _filter.value;
 
-
   @override
   void onReady() {
     getConsultations();
     super.onReady();
   }
 
-
   Future getConsultations() async {
-    var userCollection = _db.collection('users').doc(_authentication.currentUser!.uid).get();
-    
-    await userCollection.then((value) {
-      print(value.data());
+    var userCollection =
+        _db.collection('users').doc(_authentication.currentUser!.uid).get();
 
-      value.data()!['consultations'].forEach((element) {
-        _consultations.add(AppoinmentModel.fromMap(element));
-      });
+    await userCollection.then((value) {
+      if (value.data() != null) {
+        print(value.data());
+
+        value.data()!['consultations'].forEach((element) {
+          _consultations.add(AppoinmentModel.fromMap(element));
+        });
+      }
     });
   }
 
@@ -42,7 +44,7 @@ class ConsultationController extends GetxController {
     return _filter.value.contains(param);
   }
 
-  void clearBottomSearch() { 
+  void clearBottomSearch() {
     _filter.value = '';
     _consultations.value = [];
     getConsultations();
