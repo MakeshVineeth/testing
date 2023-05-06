@@ -38,15 +38,14 @@ class PsychologistModel {
     required this.isOnline,
   });
 
-  factory PsychologistModel.fromMap(Map data, {required String uid }) {
-    return PsychologistModel(
+  factory PsychologistModel.fromMap(Map data, {required String uid }) => PsychologistModel(
       uid: uid,
       name: data['name'],
       userImage: data['user_image'],
       experience: data['experience'],
-      star: data['star'],
+      star: double.parse(data['star']),
       earlyAdmit: data['early_admit'],
-      minAmount: data['min_amount'],
+      minAmount: double.parse(data['min_amount']),
       specialization: data['specialization'],
       placeOfWork: data['place_of_work'],
       country: data['country'],
@@ -58,7 +57,6 @@ class PsychologistModel {
       reviews: data['reviews'],
       isOnline: data['is_online'] ?? false,
     );
-  }
 
   Map<String, dynamic> toMap() {
     return {

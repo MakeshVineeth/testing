@@ -1,10 +1,8 @@
 import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:mental_health_care_app/auth/application/auth_controller.dart';
 import 'package:mental_health_care_app/core/theme/custom_texts.dart';
 import 'package:mental_health_care_app/home/model/psychologist_model.dart';
@@ -13,7 +11,6 @@ class HomeController extends GetxController
     with GetSingleTickerProviderStateMixin {
   AuthController authController = Get.put(AuthController());
   late TabController tabController = TabController(length: 6, vsync: this);
-  final FirebaseFirestore _db = Get.find();
   final RxList<PsychologistModel> psychologists = <PsychologistModel>[].obs;
   final RxList<PsychologistModel> psychologistsList = <PsychologistModel>[].obs;
   final RxList<PsychologistModel> gestaltList = <PsychologistModel>[].obs;
@@ -54,49 +51,35 @@ class HomeController extends GetxController
   }
 
   Future<void> getRealDatas() async {
-    Future<QuerySnapshot<Map<String?, dynamic>>> firebasePsychologists =
-        _db.collection('psychologists').get();
+    CollectionReference firebasePsychologists =
+        FirebaseFirestore.instance.collection('psychologists');
 
-    List<PsychologistModel> allPsychologists =
-        await firebasePsychologists.then((value) {
-      if (value.size > 0) {
-        return value.docs.map((documentSnap) {
-          try {
-            if (documentSnap.exists) {
-              return PsychologistModel.fromMap(
-                documentSnap.data(),
-                uid: documentSnap.id,
-              );
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-          }
+    QuerySnapshot querySnapshot = await firebasePsychologists.get();
 
-          return PsychologistModel(
-            uid: 'uid',
-            name: 'name',
-            userImage: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
-            experience: 0,
-            star: 0,
-            earlyAdmit: 'earlyAdmit',
-            minAmount: 0,
-            specialization: 'specialization',
-            placeOfWork: 'placeOfWork',
-            country: 'country',
-            currency: 'currency',
-            about: 'about',
-            diplomarAndCertificate: List.empty(),
-            articles: List.empty(),
-            education: 'education',
-            reviews: List.empty(),
-            isOnline: false,
+    final data = querySnapshot.docs.map((documentSnap) {
+      try {
+        if (documentSnap.exists) {
+          return PsychologistModel.fromMap(
+            documentSnap.data() as Map,
+            uid: documentSnap.id,
           );
-        }).toList();
-      } else {
-        debugPrint("Empty data received from Db.");
-        return List.empty();
+        }
+      } catch (e) {
+        debugPrint(e.toString());
       }
-    });
+    }).toList();
+
+    List<PsychologistModel> allPsychologists = List.empty(growable: true);
+
+    for (var i = 0; i < data.length; i++) {
+      if (data[i] != null) {
+        allPsychologists.add(data[i]!);
+      }
+    }
+
+    if (allPsychologists.isEmpty) {
+      allPsychologists.add(getPsychologistEntry());
+    }
 
     print(allPsychologists);
 
@@ -104,6 +87,29 @@ class HomeController extends GetxController
       psychologists.value = allPsychologists;
       resetFilterList();
     }
+  }
+
+  PsychologistModel getPsychologistEntry() {
+    return PsychologistModel(
+      uid: 'uid',
+      name: 'name',
+      userImage:
+          'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+      experience: 0,
+      star: 0,
+      earlyAdmit: 'earlyAdmit',
+      minAmount: 0,
+      specialization: 'specialization',
+      placeOfWork: 'placeOfWork',
+      country: 'country',
+      currency: 'currency',
+      about: 'about',
+      diplomarAndCertificate: List.empty(),
+      articles: List.empty(),
+      education: 'education',
+      reviews: List.empty(),
+      isOnline: false,
+    );
   }
 
   void openAndCloseSearch() {
