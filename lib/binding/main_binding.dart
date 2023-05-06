@@ -9,23 +9,22 @@ import 'package:mental_health_care_app/core/application/custom_navigation_contro
 import 'package:mental_health_care_app/makeappointment/application/make_appointment_controller.dart';
 import 'package:mental_health_care_app/onboard/application/onboard_controller.dart';
 
-class MainBinding extends Binding {
-  @override
-  List<Bind> dependencies() {
-    initializeFirebase();
-    Get.put<AuthController>(AuthController(), permanent: true);
-    Get.put<OnboardingController>(OnboardingController());
-    Get.put<CustomNavigationController>(CustomNavigationController());
-    Get.put<AdmissionController>(AdmissionController());
-    Get.put<MakeAppointmentController>(MakeAppointmentController());
-    return List.empty();
-  }
-
+class MainBinding extends Bindings {
   Future initializeFirebase() async {
     Get.lazyPut<FirebaseAuth>(() => FirebaseAuth.instance, fenix: true);
     Get.lazyPut<FirebaseFirestore>(() => FirebaseFirestore.instance,
         fenix: true);
     Get.lazyPut<FirebaseStorage>(() => FirebaseStorage.instance, fenix: true);
     Get.lazyPut<FirebaseDatabase>(() => FirebaseDatabase.instance, fenix: true);
+  }
+
+  @override
+  Future<void> dependencies() async {
+    await initializeFirebase();
+    Get.put<AuthController>(AuthController(), permanent: true);
+    Get.put<OnboardingController>(OnboardingController());
+    Get.put<CustomNavigationController>(CustomNavigationController());
+    Get.put<AdmissionController>(AdmissionController());
+    Get.put<MakeAppointmentController>(MakeAppointmentController());
   }
 }

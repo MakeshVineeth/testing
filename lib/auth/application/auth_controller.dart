@@ -104,7 +104,7 @@ class AuthController extends GetxController {
       Get.snackbar(
         'Email Sign Up',
         e.message!,
-        snackPosition: SnackPosition.bottom,
+        snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 10),
         backgroundColor: AppColors.mentalBrandColor,
         colorText: AppColors.mentalBrandLightColor,
@@ -133,7 +133,7 @@ class AuthController extends GetxController {
       Get.snackbar(
         'Email Sign Up',
         e.message!,
-        snackPosition: SnackPosition.bottom,
+        snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 10),
         backgroundColor: AppColors.mentalBrandColor,
         colorText: AppColors.mentalBrandLightColor,
@@ -163,7 +163,7 @@ class AuthController extends GetxController {
       Get.snackbar(
         'Google Sign In',
         e.message!,
-        snackPosition: SnackPosition.bottom,
+        snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 10),
         backgroundColor: AppColors.mentalBrandColor,
         colorText: AppColors.mentalBrandLightColor,
@@ -194,7 +194,7 @@ class AuthController extends GetxController {
       Get.snackbar(
         'Facebook Sign In',
         e.message!,
-        snackPosition: SnackPosition.bottom,
+        snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 10),
         backgroundColor: AppColors.mentalBrandColor,
         colorText: AppColors.mentalBrandLightColor,
@@ -245,7 +245,7 @@ class AuthController extends GetxController {
       Get.snackbar(
         'Apple Sign In',
         e.message!,
-        snackPosition: SnackPosition.bottom,
+        snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 10),
         backgroundColor: AppColors.mentalBrandColor,
         colorText: AppColors.mentalBrandLightColor,
@@ -307,7 +307,7 @@ class AuthController extends GetxController {
       Get.snackbar(
         'Forgot Password',
         e.message!,
-        snackPosition: SnackPosition.bottom,
+        snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 10),
         backgroundColor: AppColors.mentalBrandColor,
         colorText: AppColors.mentalBrandLightColor,

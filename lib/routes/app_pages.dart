@@ -10,6 +10,7 @@ import 'package:mental_health_care_app/binding/chat_home_binding.dart';
 import 'package:mental_health_care_app/binding/chat_room_binding.dart';
 import 'package:mental_health_care_app/binding/consultation_binding.dart';
 import 'package:mental_health_care_app/binding/home_binding.dart';
+import 'package:mental_health_care_app/binding/main_binding.dart';
 import 'package:mental_health_care_app/binding/profile_binding.dart';
 import 'package:mental_health_care_app/chats/presentation/chat_room_screen.dart';
 import 'package:mental_health_care_app/chats/presentation/chats_screen.dart';
@@ -31,6 +32,7 @@ class AppPages {
     GetPage(
       name: INITIAL,
       page: () => WelcomeScreen(),
+      binding: MainBinding(),
     ),
     GetPage(
       name: Routes.ONBOARD,

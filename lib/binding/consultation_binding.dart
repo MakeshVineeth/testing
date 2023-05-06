@@ -1,10 +1,9 @@
 import 'package:get/get.dart';
 import 'package:mental_health_care_app/consultations/application/consultation_controller.dart';
 
-class ConsultationBinding extends Binding {
+class ConsultationBinding extends Bindings {
   @override
-  List<Bind> dependencies() {
+  void dependencies() {
     Get.put<ConsultationController>(ConsultationController());
-    return List.empty();
   }
 }

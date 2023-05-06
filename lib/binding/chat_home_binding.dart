@@ -1,10 +1,9 @@
 import 'package:get/get.dart';
 import 'package:mental_health_care_app/chats/application/chat_home_controller.dart';
 
-class ChatHomeBinding extends Binding {
+class ChatHomeBinding extends Bindings {
   @override
-  List<Bind> dependencies() {
+  void dependencies() {
     Get.put<ChatHomeController>(ChatHomeController());
-    return List.empty();
   }
 }
