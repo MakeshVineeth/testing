@@ -28,7 +28,7 @@ class DetailsMap extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: Theme.of(context).textTheme.caption!.copyWith(
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontWeight: FontWeight.w400,
                       fontSize: 15.0,
                       color: AppColors.mentalBarUnselected,
@@ -37,7 +37,7 @@ class DetailsMap extends StatelessWidget {
               Spacer(),
               Text(
                 '$name ${checkCurrency(isCurrency, context)}',
-                style: Theme.of(context).textTheme.caption!.copyWith(
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontWeight: FontWeight.w400,
                       fontSize: 15.0,
                     ),

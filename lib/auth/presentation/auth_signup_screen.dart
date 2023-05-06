@@ -121,7 +121,7 @@ class _AuthSignUpScreenState extends State<AuthSignUpScreen> {
                           children: [
                             Text(
                               CustomText.mentalSocialSignInText,
-                              style: Theme.of(context).textTheme.subtitle2,
+                              style: Theme.of(context).textTheme.titleSmall,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -160,7 +160,7 @@ class _AuthSignUpScreenState extends State<AuthSignUpScreen> {
                           children: [
                             Text(
                               CustomText.mentalSignUpHaveAcctText,
-                              style: Theme.of(context).textTheme.button,
+                              style: Theme.of(context).textTheme.labelLarge,
                             ),
                             GestureDetector(
                               onTap: () => Get.back(),
@@ -168,7 +168,7 @@ class _AuthSignUpScreenState extends State<AuthSignUpScreen> {
                                 CustomText.mentalSignInText,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .button!
+                                    .labelLarge!
                                     .copyWith(
                                       color: AppColors.mentalBrandColor,
                                       fontWeight: FontWeight.w600,

@@ -38,7 +38,7 @@ class _ConsultationDetailsScreenState
                   SizedBox(width: MediaQuery.of(context).size.width * 0.2),
                   Text(
                     CustomText.kConsultationDetailsTitle,
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           fontWeight: FontWeight.w500,
                           fontSize: 17.0,
                         ),
@@ -52,7 +52,7 @@ class _ConsultationDetailsScreenState
                 ),
                 child: Text(
                   CustomText.kConsultationDetailsSubTitle,
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         fontWeight: FontWeight.w500,
                         fontSize: 17.0,
                       ),
@@ -95,7 +95,7 @@ class _ConsultationDetailsScreenState
                       changeBtns
                           ? CustomText.kConsultationDetailsSubTitle2
                           : CustomText.kConsultationDetailsSubTitle3,
-                      style: Theme.of(context).textTheme.headline4!.copyWith(
+                      style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.w500,
                             fontSize: 17.0,
                           ),
@@ -104,7 +104,7 @@ class _ConsultationDetailsScreenState
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(
                         '${Get.arguments.about}',
-                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                        style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                               fontWeight: FontWeight.w400,
                               fontSize: 14.0,
                               color: AppColors.mentalBarUnselected,
@@ -161,7 +161,7 @@ class _ConsultationDetailsScreenState
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(
                         text,
-                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                        style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                               fontWeight: FontWeight.w400,
                               fontSize: 14.0,
                               color: AppColors.mentalBarUnselected,
@@ -173,7 +173,7 @@ class _ConsultationDetailsScreenState
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(
                         CustomText.kConsultationDetailsSubTitle4,
-                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                        style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                               fontWeight: FontWeight.w400,
                               fontSize: 14.0,
                               color: AppColors.mentalBarUnselected,

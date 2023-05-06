@@ -72,7 +72,7 @@ class _CustomExpandCommentsState extends State<CustomExpandComments>
                         Text(
                           "Show less",
                           style:
-                              Theme.of(context).textTheme.caption!.copyWith(
+                              Theme.of(context).textTheme.bodySmall!.copyWith(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 12.0,
                                     color: AppColors.mentalBrandColor,
@@ -94,7 +94,7 @@ class _CustomExpandCommentsState extends State<CustomExpandComments>
                         Text(
                           "${CustomText.kmentalArticleDetailText4} ${widget.comments.length} ${CustomText.kmentalArticleDetailText5}",
                           style:
-                              Theme.of(context).textTheme.caption!.copyWith(
+                              Theme.of(context).textTheme.bodySmall!.copyWith(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 12.0,
                                     color: AppColors.mentalBrandColor,

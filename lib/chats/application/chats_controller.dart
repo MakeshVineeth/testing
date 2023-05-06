@@ -74,6 +74,7 @@ class ChatsController extends GetxController {
         .catchError((error) {
       _mRecorderIsInited.value = false;
       print(error);
+      return false;
     });
   }
 
@@ -351,7 +352,7 @@ class ChatsController extends GetxController {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       content: Text(
         e.toString().split(':').last,
-        style: Theme.of(context).textTheme.headline5!.copyWith(
+        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
               fontSize: 14.0,
             ),
       ),
@@ -515,13 +516,18 @@ class ChatsController extends GetxController {
     }
   }
 
-  void seekPlayerPosition({required Offset localPosition, required double maxWidth, required int duration }) async {
+  void seekPlayerPosition(
+      {required Offset localPosition,
+      required double maxWidth,
+      required int duration}) async {
     print("Tapped scrubber at ${localPosition.dx}");
-    var position = localPosition.dx < 0 ? 0 : (localPosition.dx > maxWidth ? maxWidth : localPosition.dx);
+    var position = localPosition.dx < 0
+        ? 0
+        : (localPosition.dx > maxWidth ? maxWidth : localPosition.dx);
     var calculatePosition = position / maxWidth * duration;
     await player.seek(Duration(milliseconds: calculatePosition.toInt()));
   }
-  
+
   // help to set audio message that we currently tapped on to play.
   void setMessageToPlay({required MessageChat messageChat}) async {
     selectedAudioMessage.value = messageChat;
@@ -532,7 +538,7 @@ class ChatsController extends GetxController {
   bool isAudioMessageToPlay({required MessageChat messageChat}) {
     if (selectedAudioMessage.value.messageUid != '') {
       return selectedAudioMessage.value.timestamp == messageChat.timestamp;
-    }else {
+    } else {
       return false;
     }
   }

@@ -77,7 +77,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
                           child: Text(
                             homeController.selectedPsychologist.value!.name,
                             style:
-                                Theme.of(context).textTheme.headline3!.copyWith(
+                                Theme.of(context).textTheme.displaySmall!.copyWith(
                                       fontWeight: FontWeight.w400,
                                     ),
                           ),
@@ -90,7 +90,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
                               text: TextSpan(
                                   text: homeController.selectedPsychologist
                                       .value!.specialization,
-                                  style: Theme.of(context).textTheme.caption,
+                                  style: Theme.of(context).textTheme.bodySmall,
                                   children: [
                                     WidgetSpan(
                                       child: Transform.translate(
@@ -102,7 +102,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
                                             '.',
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline1!
+                                                .displayLarge!
                                                 .copyWith(
                                                   fontSize: 23.0,
                                                 ),
@@ -114,7 +114,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
                                       text:
                                           '${homeController.selectedPsychologist.value!.experience} years experience',
                                       style:
-                                          Theme.of(context).textTheme.caption,
+                                          Theme.of(context).textTheme.bodySmall,
                                     )
                                   ]),
                             ),
@@ -143,7 +143,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
                                   .toString() + ' )',
                               style: Theme.of(context)
                                   .textTheme
-                                  .caption!
+                                  .bodySmall!
                                   .copyWith(fontSize: 12.0),
                             ),
                           ],
@@ -269,7 +269,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
         children: [
           Text(
             review['name'],
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w400,
                   fontSize: 17.0,
                 ),
@@ -285,7 +285,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
                 SizedBox(width: 15.0),
                 Text(
                   review['date'],
-                  style: Theme.of(context).textTheme.caption!.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 13.0,
                         color: AppColors.mentalBarUnselected,
@@ -297,7 +297,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
           const SizedBox(height: 7.0),
           Text(
             review['said'],
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w400,
                   fontSize: 13.0,
                 ),
@@ -321,7 +321,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w400,
                   fontSize: 17.0,
                 ),
@@ -330,7 +330,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
             padding: const EdgeInsets.only(top: 6.0),
             child: Text(
               description,
-              style: Theme.of(context).textTheme.headline5!.copyWith(
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w400,
                     fontSize: 13.0,
                   ),
@@ -358,7 +358,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w400,
                   fontSize: 17.0,
                 ),
@@ -367,14 +367,14 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
             padding: const EdgeInsets.only(top: 6.0),
             child: Text(
               '$startYear-$endYear',
-              style: Theme.of(context).textTheme.caption,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 6.0),
             child: Text(
               description,
-              style: Theme.of(context).textTheme.headline5!.copyWith(
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w400,
                     fontSize: 13.0,
                   ),
@@ -398,7 +398,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w400,
                   fontSize: 17.0,
                 ),
@@ -407,7 +407,7 @@ class _MainHomeDetailsScreenState extends State<MainHomeDetailsScreen> {
             padding: const EdgeInsets.only(top: 6.0),
             child: Text(
               workType,
-              style: Theme.of(context).textTheme.headline5!.copyWith(
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w400,
                     fontSize: 13.0,
                   ),

@@ -58,7 +58,7 @@ class _CustomExpandItemsState extends State<CustomExpandItems>
             children: [
               Text(
                 widget.title,
-                style: Theme.of(context).textTheme.headline5!.copyWith(
+                style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                       fontWeight: FontWeight.w400,
                       fontSize: 17.0,
                     ),
@@ -66,7 +66,7 @@ class _CustomExpandItemsState extends State<CustomExpandItems>
               SizedBox(width: 8.0),
               Text(
                 widget.total.toString(),
-                style: Theme.of(context).textTheme.caption!.copyWith(
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontWeight: FontWeight.w400,
                       fontSize: 17.0,
                       color: AppColors.mentalBarUnselected,
@@ -89,7 +89,7 @@ class _CustomExpandItemsState extends State<CustomExpandItems>
                 },
                 child: Text(
                   _isExpanded ? 'Show less' : 'Show all',
-                  style: Theme.of(context).textTheme.headline5!.copyWith(
+                  style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 13.0,
                         color: AppColors.mentalBrandColor,

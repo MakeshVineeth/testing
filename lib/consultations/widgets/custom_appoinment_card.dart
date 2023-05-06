@@ -42,7 +42,7 @@ class CustomAppointmentCard extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 2.0, left: 14.0),
                     child: Text(
                       name,
-                      style: Theme.of(context).textTheme.headline3!.copyWith(
+                      style: Theme.of(context).textTheme.displaySmall!.copyWith(
                             fontWeight: FontWeight.w400,
                             fontSize: 15.0,
                           ),
@@ -52,7 +52,7 @@ class CustomAppointmentCard extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 2.0, left: 14.0),
                     child: Text(
                       '$date, $time',
-                      style: Theme.of(context).textTheme.caption!.copyWith(
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
                             fontWeight: FontWeight.w400,
                             fontSize: 11.0,
                             color: AppColors.mentalBarUnselected,
@@ -68,7 +68,7 @@ class CustomAppointmentCard extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 15.0),
                   child: Text(
                     type,
-                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                    style: Theme.of(context).textTheme.displaySmall!.copyWith(
                           fontWeight: FontWeight.w400,
                           fontSize: type == 'Canceled' ? 13.0 : 11.0,
                           color: typeColor(type: type),
@@ -117,7 +117,7 @@ class CustomUserCard extends StatelessWidget {
               padding: const EdgeInsets.only(top: 2.0, left: 14.0),
               child: Text(
                 name,
-                style: Theme.of(context).textTheme.headline3!.copyWith(
+                style: Theme.of(context).textTheme.displaySmall!.copyWith(
                       fontWeight: FontWeight.w400,
                       fontSize: 15.0,
                     ),
@@ -127,7 +127,7 @@ class CustomUserCard extends StatelessWidget {
               padding: const EdgeInsets.only(top: 2.0, left: 14.0),
               child: Text(
                 '$date, $time',
-                style: Theme.of(context).textTheme.caption!.copyWith(
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontWeight: FontWeight.w400,
                       fontSize: 11.0,
                       color: AppColors.mentalBarUnselected,
@@ -143,7 +143,7 @@ class CustomUserCard extends StatelessWidget {
             padding: const EdgeInsets.only(right: 15.0),
             child: Text(
               type ?? '',
-              style: Theme.of(context).textTheme.headline3!.copyWith(
+              style: Theme.of(context).textTheme.displaySmall!.copyWith(
                     fontWeight: FontWeight.w400,
                     fontSize: type == 'Canceled' ? 13.0 : 11.0,
                     color: typeColor(type: type ?? ''),

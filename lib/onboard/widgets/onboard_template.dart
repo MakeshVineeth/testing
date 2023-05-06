@@ -35,7 +35,7 @@ class OnboardTemplate extends StatelessWidget {
                 child: Text(
                   CustomText.skipText,
                   textAlign: TextAlign.right,
-                  style: Theme.of(context).textTheme.headline3,
+                  style: Theme.of(context).textTheme.displaySmall,
                 ),
               )
             ],
@@ -83,7 +83,7 @@ class OnboardTemplate extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: subTitle2,
-                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                    style: Theme.of(context).textTheme.displaySmall!.copyWith(
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                     ),

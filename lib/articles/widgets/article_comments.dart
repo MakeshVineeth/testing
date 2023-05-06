@@ -55,7 +55,7 @@ class ArtcleComment extends StatelessWidget {
             children: [
               Text(
                 name,
-                style: Theme.of(context).textTheme.headline3!.copyWith(
+                style: Theme.of(context).textTheme.displaySmall!.copyWith(
                       fontWeight: FontWeight.w400,
                       fontSize: 15.0,
                     ),
@@ -69,7 +69,7 @@ class ArtcleComment extends StatelessWidget {
                 child: Text(
                   comment,
                   softWrap: true,
-                  style: Theme.of(context).textTheme.headline6!.copyWith(
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 13.0,
                       ),
@@ -82,7 +82,7 @@ class ArtcleComment extends StatelessWidget {
                 children: [
                   Text(
                     date,
-                    style: Theme.of(context).textTheme.caption!.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontWeight: FontWeight.w400,
                           fontSize: 11.0,
                           color: Colors.grey,
@@ -98,7 +98,7 @@ class ArtcleComment extends StatelessWidget {
                           child: Text(
                             CustomText.kmentalArticleDetailText3,
                             style:
-                                Theme.of(context).textTheme.caption!.copyWith(
+                                Theme.of(context).textTheme.bodySmall!.copyWith(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 11.0,
                                       color: Colors.grey,

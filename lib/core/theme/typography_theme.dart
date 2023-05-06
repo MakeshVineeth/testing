@@ -4,55 +4,55 @@ import 'package:mental_health_care_app/core/theme/app_colors.dart';
 TextTheme mentalHealthTextThemeDark(TextTheme base) {
   return base
   .copyWith(
-    headline1: base.headline1!.copyWith(
+    displayLarge: base.displayLarge!.copyWith(
       fontSize: 34.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w400,
     ),
-    headline2: base.headline2!.copyWith(
+    displayMedium: base.displayMedium!.copyWith(
       fontSize: 27.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    headline3: base.headline3!.copyWith(
+    displaySmall: base.displaySmall!.copyWith(
       fontSize: 20.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    headline4: base.headline4!.copyWith(
+    headlineMedium: base.headlineMedium!.copyWith(
       fontSize: 17.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    subtitle1: base.subtitle1!.copyWith(
+    titleMedium: base.titleMedium!.copyWith(
       fontSize: 17.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    bodyText1: base.bodyText1!.copyWith(
+    bodyLarge: base.bodyLarge!.copyWith(
       fontSize: 15.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    button: base.button!.copyWith(
+    labelLarge: base.labelLarge!.copyWith(
       fontSize: 13.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w200,
     ),
-    caption: base.caption!.copyWith(
+    bodySmall: base.bodySmall!.copyWith(
       fontSize: 11.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w200,
     ),
-    overline: base.overline!.copyWith(
+    labelSmall: base.labelSmall!.copyWith(
       fontSize: 11.0,
       height: 1.2,
       fontFamily: 'Inter',
@@ -68,55 +68,55 @@ TextTheme mentalHealthTextThemeDark(TextTheme base) {
 TextTheme mentalHealthTextThemeLight(TextTheme base) {
   return base
   .copyWith(
-    headline1: base.headline1!.copyWith(
+    displayLarge: base.displayLarge!.copyWith(
       fontSize: 34.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w400,
     ),
-    headline2: base.headline2!.copyWith(
+    displayMedium: base.displayMedium!.copyWith(
       fontSize: 27.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    headline3: base.headline3!.copyWith(
+    displaySmall: base.displaySmall!.copyWith(
       fontSize: 20.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    headline4: base.headline4!.copyWith(
+    headlineMedium: base.headlineMedium!.copyWith(
       fontSize: 17.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    subtitle1: base.subtitle1!.copyWith(
+    titleMedium: base.titleMedium!.copyWith(
       fontSize: 17.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    bodyText1: base.bodyText1!.copyWith(
+    bodyLarge: base.bodyLarge!.copyWith(
       fontSize: 15.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w300,
     ),
-    button: base.button!.copyWith(
+    labelLarge: base.labelLarge!.copyWith(
       fontSize: 13.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w200,
     ),
-    caption: base.caption!.copyWith(
+    bodySmall: base.bodySmall!.copyWith(
       fontSize: 11.0,
       height: 1.2,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w200,
     ),
-    overline: base.overline!.copyWith(
+    labelSmall: base.labelSmall!.copyWith(
       fontSize: 11.0,
       height: 1.2,
       fontFamily: 'Inter',

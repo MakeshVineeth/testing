@@ -84,7 +84,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ? CustomText.kmentalProfileScreenNameMissing
                               : _profileController.getUser!.name,
                           style:
-                              Theme.of(context).textTheme.headline1!.copyWith(
+                              Theme.of(context).textTheme.displayLarge!.copyWith(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 15.0,
                                   ),
@@ -93,7 +93,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           _profileController.getUser!.email.isEmpty
                               ? CustomText.kmentalProfileScreenEmailMissing
                               : _profileController.getUser!.email,
-                          style: Theme.of(context).textTheme.caption!.copyWith(
+                          style: Theme.of(context).textTheme.bodySmall!.copyWith(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 11.0,
                                 color: AppColors.mentalBarUnselected,

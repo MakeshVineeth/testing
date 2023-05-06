@@ -8,7 +8,7 @@ import 'package:mental_health_care_app/profile/widgets/profie_edit_card.dart';
 import 'package:mental_health_care_app/uis/custom_input_fields.dart';
 import 'package:mental_health_care_app/utils/extentions_utils.dart';
 import 'package:mental_health_care_app/utils/focus_helper.dart';
-import 'package:flutter_libphonenumber/flutter_libphonenumber.dart';
+import 'package:flutter_libphonenumber/flutter_libphonenumber.dart' as FlutterLibPhoneNumber;
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({Key? key}) : super(key: key);
@@ -18,17 +18,17 @@ class EditProfileScreen extends StatefulWidget {
 }
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
-  final initFuture = FlutterLibphonenumber().init();
+  final initFuture = FlutterLibPhoneNumber.init();
   final ProfileMainController _profileController = Get.find();
 
   /// Used to format numbers as mobile or land line
-  var globalPhoneType = PhoneNumberType.mobile;
+  var globalPhoneType = FlutterLibPhoneNumber.PhoneNumberType.mobile;
 
   /// Use international or national phone format
-  var globalPhoneFormat = PhoneNumberFormat.international;
+  var globalPhoneFormat = FlutterLibPhoneNumber.PhoneNumberFormat.international;
 
   /// Current selected country
-  var currentSelectedCountry = CountryWithPhoneCode(
+  var currentSelectedCountry = FlutterLibPhoneNumber.CountryWithPhoneCode(
     countryName: 'United Arab Emirates',
     countryCode: 'AE',
     phoneCode: '971',
@@ -66,7 +66,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   Center(
                     child: Text(
                       CustomText.kmentalProfileEditTitle,
-                      style: Theme.of(context).textTheme.headline2!.copyWith(
+                      style: Theme.of(context).textTheme.displayMedium!.copyWith(
                             fontWeight: FontWeight.w500,
                             fontSize: 17.0,
                           ),
@@ -94,7 +94,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               Center(
                 child: Text(
                   CustomText.kmentalProfileEditPhotoText,
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         fontWeight: FontWeight.w500,
                         fontSize: 12.0,
                         color: AppColors.mentalBarUnselected,
@@ -110,7 +110,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
                   CustomText.mentalMakeAppointmentInputName,
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         color: AppColors.mentalBarUnselected,
                         fontSize: 13.0,
                         fontWeight: FontWeight.w400,
@@ -141,7 +141,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
                   CustomText.kmentalProfileEditEmail,
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         color: AppColors.mentalBarUnselected,
                         fontSize: 13.0,
                         fontWeight: FontWeight.w400,
@@ -172,7 +172,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
                   CustomText.kmentalProfileEditPhone,
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         color: AppColors.mentalBarUnselected,
                         fontSize: 13.0,
                         fontWeight: FontWeight.w400,
@@ -192,7 +192,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     return null;
                   },
                   inputformatters: [
-                    LibPhonenumberTextFormatter(
+                    FlutterLibPhoneNumber.LibPhonenumberTextFormatter(
                       phoneNumberType: globalPhoneType,
                       phoneNumberFormat: globalPhoneFormat,
                       country: currentSelectedCountry,

@@ -42,7 +42,7 @@ class _MakeAppointmentScreenState extends State<MakeAppointmentScreen> {
                     SizedBox(width: MediaQuery.of(context).size.width * 0.2),
                     Text(
                       CustomText.mentalMakeAppointmentTitle,
-                      style: Theme.of(context).textTheme.headline4!.copyWith(
+                      style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.w500,
                             fontSize: 17.0,
                           ),
@@ -61,7 +61,7 @@ class _MakeAppointmentScreenState extends State<MakeAppointmentScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
                     CustomText.mentalMakeAppointmentInputName,
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           color: AppColors.mentalBarUnselected,
                           fontSize: 13.0,
                           fontWeight: FontWeight.w400,
@@ -87,7 +87,7 @@ class _MakeAppointmentScreenState extends State<MakeAppointmentScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
                     CustomText.mentalMakeAppointmentPaymentSection,
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           color: AppColors.mentalBarUnselected,
                           fontSize: 13.0,
                           fontWeight: FontWeight.w400,
@@ -165,7 +165,7 @@ class _MakeAppointmentScreenState extends State<MakeAppointmentScreen> {
                           child: Text(
                             CustomText.kAddCardText,
                             style:
-                                Theme.of(context).textTheme.headline4!.copyWith(
+                                Theme.of(context).textTheme.headlineMedium!.copyWith(
                                       color: AppColors.mentalBrandColor,
                                       fontSize: 17.0,
                                       fontWeight: FontWeight.w400,

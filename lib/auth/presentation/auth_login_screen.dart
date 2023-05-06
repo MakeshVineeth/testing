@@ -104,7 +104,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                               child: Text(
                                 CustomText.mentalForgotPasswordText,
                                 textAlign: TextAlign.right,
-                                style: Theme.of(context).textTheme.button,
+                                style: Theme.of(context).textTheme.labelLarge,
                               ),
                             )
                           ],
@@ -134,7 +134,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                           children: [
                             Text(
                               CustomText.mentalSocialSignUpText,
-                              style: Theme.of(context).textTheme.subtitle2,
+                              style: Theme.of(context).textTheme.titleSmall,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -173,7 +173,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                           children: [
                             Text(
                               CustomText.mentalSignInNoAcctText,
-                              style: Theme.of(context).textTheme.button,
+                              style: Theme.of(context).textTheme.labelLarge,
                             ),
                             GestureDetector(
                               onTap: () => Get.toNamed('/signup'),
@@ -181,7 +181,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                                 CustomText.mentalSignUpText,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .button!
+                                    .labelLarge!
                                     .copyWith(
                                       color: AppColors.mentalBrandColor,
                                       fontWeight: FontWeight.w600,

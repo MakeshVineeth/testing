@@ -30,7 +30,7 @@ class PaymentOptions extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
                     title,
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           fontSize: 17.0,
                           fontWeight: FontWeight.w400,
                         ),

@@ -142,7 +142,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen>
                                       selectedPsychologist.name,
                                       style: Theme.of(context)
                                           .textTheme
-                                          .headline4!
+                                          .headlineMedium!
                                           .copyWith(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 17.0,
@@ -154,7 +154,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen>
                                           : 'offline',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .headline4!
+                                          .headlineMedium!
                                           .copyWith(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 12.0,
@@ -227,7 +227,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen>
                                     _chatsController.recorderDuration.value,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline5!
+                                        .headlineSmall!
                                         .copyWith(
                                           color: AppColors.mentalBarUnselected,
                                           fontWeight: FontWeight.w500,

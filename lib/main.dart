@@ -4,7 +4,6 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:mental_health_care_app/binding/main_binding.dart';
 import 'package:mental_health_care_app/core/theme/mental_heath_theme.dart';
 import 'package:mental_health_care_app/firebase_options.dart';
 import 'package:mental_health_care_app/launchscreen/presentation/welcome_screen.dart';
@@ -28,7 +27,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     FlutterNativeSplash.remove();
     return GetMaterialApp(
-      initialBinding: MainBinding(),
       title: 'Flutter Demo',
       theme: mentalHealthThemeLight,
       // theme: mentalHealthThemeDark,

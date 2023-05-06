@@ -251,7 +251,7 @@ void showConsultationFilter(
                   const EdgeInsets.only(left: 22.0, bottom: 10.0, top: 15.0),
               child: Text(
                 CustomText.kConsultationScreenFilterTitle,
-                style: Theme.of(context).textTheme.headline4!.copyWith(
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       fontWeight: FontWeight.w500,
                       fontSize: 20.0,
                     ),

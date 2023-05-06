@@ -58,7 +58,7 @@ class ArticleCard extends StatelessWidget {
                         ),
                         Text(
                           '${article.minRead} min',
-                          style: Theme.of(context).textTheme.caption!.copyWith(
+                          style: Theme.of(context).textTheme.bodySmall!.copyWith(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 10.0,
                                 color: AppColors.mentalBarUnselected,
@@ -67,7 +67,7 @@ class ArticleCard extends StatelessWidget {
                         const Spacer(),
                         Text(
                           article.date,
-                          style: Theme.of(context).textTheme.caption!.copyWith(
+                          style: Theme.of(context).textTheme.bodySmall!.copyWith(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 10.0,
                                 color: AppColors.mentalBarUnselected,
@@ -81,7 +81,7 @@ class ArticleCard extends StatelessWidget {
                         left: 17.0, right: 17.0, bottom: 8.0),
                     child: Text(
                       article.name,
-                      style: Theme.of(context).textTheme.headline3!.copyWith(
+                      style: Theme.of(context).textTheme.displaySmall!.copyWith(
                             fontWeight: FontWeight.w400,
                             fontSize: 13.0,
                             fontStyle: FontStyle.normal,

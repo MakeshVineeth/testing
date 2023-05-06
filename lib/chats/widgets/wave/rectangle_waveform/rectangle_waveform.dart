@@ -94,7 +94,6 @@ class _RectangleWaveformState extends AudioWaveformState<RectangleWaveform> {
     }
     final processedSamples = this.processedSamples;
     final activeSamples = this.activeSamples;
-    final showActiveWaveform = this.showActiveWaveform;
     final waveformAlignment = this.waveformAlignment;
     final sampleWidth = this.sampleWidth;
 

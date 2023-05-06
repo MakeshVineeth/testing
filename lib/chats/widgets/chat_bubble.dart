@@ -70,7 +70,7 @@ class ChatBubble extends StatelessWidget {
                   SizedBox(width: 5.0),
                   Text(
                     TimFormatter.formatChatTime(int.parse(message.timestamp)),
-                    style: Theme.of(context).textTheme.caption!.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontWeight: FontWeight.w400,
                           fontSize: 13.0,
                           color: AppColors.mentalPureWhite,
@@ -139,7 +139,7 @@ class ChatBubble extends StatelessWidget {
                   SizedBox(width: 5.0),
                   Text(
                     TimFormatter.formatChatTime(int.parse(message.timestamp)),
-                    style: Theme.of(context).textTheme.caption!.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontWeight: FontWeight.w400,
                           fontSize: 13.0,
                           color: AppColors.mentalBarUnselected,
@@ -212,7 +212,7 @@ class ChatBubble extends StatelessWidget {
                   SizedBox(width: 5.0),
                   Text(
                     TimFormatter.formatChatTime(int.parse(message.timestamp)),
-                    style: Theme.of(context).textTheme.caption!.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontWeight: FontWeight.w400,
                           fontSize: 13.0,
                           color: AppColors.mentalPureWhite,
@@ -261,7 +261,7 @@ class ChatBubble extends StatelessWidget {
                 SizedBox(width: 5.0),
                 Text(
                   TimFormatter.formatChatTime(int.parse(message.timestamp)),
-                  style: Theme.of(context).textTheme.caption!.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 13.0,
                         color: AppColors.mentalPureWhite,
@@ -458,7 +458,7 @@ class ChatBubble extends StatelessWidget {
                   SizedBox(width: 5.0),
                   Text(
                     TimFormatter.formatChatTime(int.parse(message.timestamp)),
-                    style: Theme.of(context).textTheme.caption!.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontWeight: FontWeight.w400,
                           fontSize: 13.0,
                           color: AppColors.mentalBarUnselected,

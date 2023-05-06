@@ -129,7 +129,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                                     "${article.minRead} min",
                                     style: Theme.of(context)
                                         .textTheme
-                                        .caption!
+                                        .bodySmall!
                                         .copyWith(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 13.0,
@@ -143,7 +143,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                                 article.date,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .caption!
+                                    .bodySmall!
                                     .copyWith(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 13.0,
@@ -180,7 +180,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                                 CustomText.kmentalArticleDetailText1,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .caption!
+                                    .bodySmall!
                                     .copyWith(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 15.0,
@@ -215,7 +215,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                                 CustomText.kmentalArticleDetailText2,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline5!
+                                    .headlineSmall!
                                     .copyWith(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 17.0,
@@ -254,7 +254,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                                           CustomText.kmentalArticleDetailText8,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline2!
+                                              .displayMedium!
                                               .copyWith(
                                                 fontWeight: FontWeight.w400,
                                                 fontSize: 15.0,
@@ -292,7 +292,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                             Text(
                               CustomText.kmentalArticleDetailText6,
                               style:
-                                  Theme.of(context).textTheme.caption!.copyWith(
+                                  Theme.of(context).textTheme.bodySmall!.copyWith(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 14.0,
                                         color: AppColors.mentalBarUnselected,
@@ -302,7 +302,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                               _articlesController.replyCommentAuthorName.value,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline5!
+                                  .headlineSmall!
                                   .copyWith(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 14.0,
@@ -317,7 +317,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                                 CustomText.kmentalArticleDetailText7,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline5!
+                                    .headlineSmall!
                                     .copyWith(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 14.0,
@@ -365,7 +365,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                                 CustomText.kmentalComingSoonFeatureText,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .caption!
+                                    .bodySmall!
                                     .copyWith(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 14.0,

@@ -46,12 +46,10 @@ class RectangleInActiveWaveformPainter extends InActiveWaveformPainter {
       ..color = borderColor
       ..strokeCap = StrokeCap.round
       ..strokeWidth = borderWidth;
-    //Gets the [alignPosition] depending on [waveformAlignment]
-    final alignPosition = waveformAlignment.getAlignPosition(size.height);
+
     //print('samples length for inactive: ${samples.length}');
 
     for (var i = 0; i < samples.length; i++) {
-      final x = sampleWidth * i;
       var y = samples[i];
 
       //print('x: $x, y: $y');

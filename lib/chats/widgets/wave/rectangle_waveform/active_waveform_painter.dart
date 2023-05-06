@@ -48,12 +48,9 @@ class RectangleActiveWaveformPainter extends ActiveWaveformPainter {
       ..strokeCap = StrokeCap.round
       ..strokeWidth = borderWidth;
 
-    //Gets the [alignPosition] depending on [waveformAlignment]
-    final alignPosition = waveformAlignment.getAlignPosition(size.height);
     //print('samples length for active: ${activeSamples.length}');
 
     for (var i = 0; i < activeSamples.length; i++) {
-      final x = sampleWidth * i;
       final y = activeSamples[i];
 
       //print('x: $x, y: $y');

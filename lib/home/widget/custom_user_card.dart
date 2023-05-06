@@ -44,7 +44,7 @@ class CustomUserCard extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 15.0),
                   child: Text(
                     name,
-                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                    style: Theme.of(context).textTheme.displaySmall!.copyWith(
                           fontWeight: FontWeight.w400,
                         ),
                   ),
@@ -56,7 +56,7 @@ class CustomUserCard extends StatelessWidget {
                     child: RichText(
                       text: TextSpan(
                           text: specialization,
-                          style: Theme.of(context).textTheme.caption,
+                          style: Theme.of(context).textTheme.bodySmall,
                           children: [
                             WidgetSpan(
                               child: Transform.translate(
@@ -67,7 +67,7 @@ class CustomUserCard extends StatelessWidget {
                                     '.',
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline1!
+                                        .displayLarge!
                                         .copyWith(
                                           fontSize: 23.0,
                                         ),
@@ -77,7 +77,7 @@ class CustomUserCard extends StatelessWidget {
                             ),
                             TextSpan(
                               text: '$experience years experience',
-                              style: Theme.of(context).textTheme.caption,
+                              style: Theme.of(context).textTheme.bodySmall,
                             )
                           ]),
                     ),
@@ -113,7 +113,7 @@ class CustomUserCard extends StatelessWidget {
                       '(10)',
                       style: Theme.of(context)
                           .textTheme
-                          .caption!
+                          .bodySmall!
                           .copyWith(fontSize: 12.0),
                     ),
                   ],

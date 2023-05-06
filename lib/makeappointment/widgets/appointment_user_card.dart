@@ -27,7 +27,7 @@ class AppointmentUserCard extends StatelessWidget {
                           child: Text(
                             name,
                             style:
-                                Theme.of(context).textTheme.headline3!.copyWith(
+                                Theme.of(context).textTheme.displaySmall!.copyWith(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 15.0,
                                     ),
@@ -38,7 +38,7 @@ class AppointmentUserCard extends StatelessWidget {
                           child: Text(
                             availability,
                             style:
-                                Theme.of(context).textTheme.caption!.copyWith(
+                                Theme.of(context).textTheme.bodySmall!.copyWith(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 11.0,
                                       color: AppColors.mentalBarUnselected,

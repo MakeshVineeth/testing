@@ -118,7 +118,7 @@ class _AuthPasswordRecoveryScreenState
                           children: [
                             Text(
                               CustomText.mentalPasswordResetBottomText,
-                              style: Theme.of(context).textTheme.button,
+                              style: Theme.of(context).textTheme.labelLarge,
                             ),
                             GestureDetector(
                               onTap: () => Get.back(),
@@ -126,7 +126,7 @@ class _AuthPasswordRecoveryScreenState
                                 CustomText.mentalPasswordResetReturnText,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .button!
+                                    .labelLarge!
                                     .copyWith(
                                       color: AppColors.mentalBrandColor,
                                       fontWeight: FontWeight.w600,

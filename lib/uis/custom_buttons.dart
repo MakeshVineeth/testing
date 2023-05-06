@@ -195,11 +195,11 @@ class CustomTextBtn extends StatelessWidget {
               children: [
                 Text(
                   text,
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 17.0,
                         color: textColor ??
-                            Theme.of(context).textTheme.headline4!.color,
+                            Theme.of(context).textTheme.headlineMedium!.color,
                       ),
                 ),
                 const Spacer(),

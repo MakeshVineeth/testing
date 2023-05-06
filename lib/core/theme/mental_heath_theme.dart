@@ -32,7 +32,6 @@ ThemeData buildDarkTheme() {
       hintStyle: _builtTextStyle(AppColors.mentalOnboardTextColor),
       prefixStyle: _builtTextStyle(AppColors.mentalOnboardTextColor),
     ),
-    backgroundColor: AppColors.mentalDarkThemeColor,
     scaffoldBackgroundColor: AppColors.mentalDarkThemeColor,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.mentalDarkThemeColor,
@@ -63,18 +62,17 @@ ThemeData buildDarkTheme() {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: AppColors.mentalBrandColor,
+        backgroundColor: AppColors.mentalBrandColor,
       ),
     ),
     dialogBackgroundColor: AppColors.mentalDarkThemeColor,
     textTheme: mentalHealthTextThemeDark(base.textTheme),
-    primaryTextTheme: Typography().white,
-    colorScheme: ColorScheme.dark(
+    primaryTextTheme: Typography().white, colorScheme: ColorScheme.dark(
       primary: AppColors.mentalBrandColor,
       surface: AppColors.mentalDarkThemeColor,
       background: AppColors.mentalDarkThemeColor,
       brightness: Brightness.dark,
-    ),
+    ).copyWith(background: AppColors.mentalDarkThemeColor),
   );
 }
 
@@ -107,7 +105,6 @@ ThemeData buildLightTheme() {
       hintStyle: _builtTextStyle(AppColors.mentalBorderColor),
       prefixStyle: _builtTextStyle(AppColors.mentalOnboardTextColor),
     ),
-    backgroundColor: AppColors.mentalBrandLightColor,
     scaffoldBackgroundColor: AppColors.mentalBrandLightColor,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.mentalBrandLightColor,
@@ -137,17 +134,16 @@ ThemeData buildLightTheme() {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: AppColors.mentalBrandColor,
+        backgroundColor: AppColors.mentalBrandColor,
       ),
     ),
     dialogBackgroundColor: AppColors.mentalBrandLightColor,
     textTheme: mentalHealthTextThemeLight(base.textTheme),
-    primaryTextTheme: Typography().black,
-    colorScheme: ColorScheme.light(
+    primaryTextTheme: Typography().black, colorScheme: ColorScheme.light(
       primary: AppColors.mentalBrandColor,
       surface: AppColors.mentalBrandLightColor,
       background: AppColors.mentalBrandLightColor,
       brightness: Brightness.light,
-    ),
+    ).copyWith(background: AppColors.mentalBrandLightColor),
   );
 }

@@ -42,7 +42,7 @@ class _AdmissionScreenState extends State<AdmissionScreen> {
                   SizedBox(width: MediaQuery.of(context).size.width * 0.2),
                   Text(
                     CustomText.mentalAdmissionPageTitle,
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           fontWeight: FontWeight.w500,
                           fontSize: 17.0,
                         ),
@@ -112,7 +112,7 @@ class _AdmissionScreenState extends State<AdmissionScreen> {
                 ),
                 child: Text(
                   CustomText.mentalAdmissionTimeTitle,
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         fontWeight: FontWeight.w500,
                         fontSize: 17.0,
                       ),

@@ -43,7 +43,7 @@ class ProfileEditCard extends StatelessWidget {
                 ),
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.headline3!.copyWith(
+                  style: Theme.of(context).textTheme.displaySmall!.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 17.0,
                       ),

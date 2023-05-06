@@ -186,7 +186,7 @@ class CustomSearchBar extends StatelessWidget {
                   borderRadius: BorderRadius.circular(28.5),
                   borderSide: BorderSide.none),
               hintText: placeholder,
-              hintStyle: Theme.of(context).textTheme.headline3!.copyWith(
+              hintStyle: Theme.of(context).textTheme.displaySmall!.copyWith(
                   color: AppColors.mentalBarUnselected,
                   fontWeight: FontWeight.w400)),
           autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -255,7 +255,7 @@ class CustomChatField extends StatelessWidget {
                     borderRadius: BorderRadius.circular(28.5),
                     borderSide: BorderSide.none),
                 hintText: placeholder,
-                hintStyle: Theme.of(context).textTheme.headline3!.copyWith(
+                hintStyle: Theme.of(context).textTheme.displaySmall!.copyWith(
                       color: AppColors.mentalBarUnselected,
                       fontWeight: FontWeight.w400,
                       fontSize: 13.0,

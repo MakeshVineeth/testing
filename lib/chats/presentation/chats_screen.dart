@@ -118,7 +118,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                                         .name,
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .headline4!
+                                                        .headlineMedium!
                                                         .copyWith(
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -144,7 +144,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                                                 .timestamp)),
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .caption!
+                                                        .bodySmall!
                                                         .copyWith(
                                                             fontWeight:
                                                                 FontWeight.w400,
@@ -191,7 +191,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                             .toString(),
                                         style: Theme.of(context)
                                             .textTheme
-                                            .caption!
+                                            .bodySmall!
                                             .copyWith(
                                               color: AppColors.mentalPureWhite,
                                               fontWeight: FontWeight.w400,
@@ -247,7 +247,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
             padding: EdgeInsets.only(left: CustomSpacing.kBottomSmall - 2),
             child: Text(
               message.content,
-              style: Theme.of(context).textTheme.caption!.copyWith(
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
                     fontWeight: FontWeight.w400,
                     fontSize: 13.0,
                     color: AppColors.mentalBarUnselected,
@@ -271,7 +271,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
         ),
         Text(
           text!,
-          style: Theme.of(context).textTheme.caption!.copyWith(
+          style: Theme.of(context).textTheme.bodySmall!.copyWith(
                 fontWeight: FontWeight.w400,
                 fontSize: 15.0,
                 color: AppColors.mentalBarUnselected,
