@@ -28,20 +28,25 @@ class CustomBottomNavigation extends StatelessWidget {
             left: MediaQuery.of(context).size.width * 0.03,
             top: 10.0,
             right: MediaQuery.of(context).size.width * 0.03),
-        child: Row(
-          children: customNavigationController
-              .getAllTabs()
-              .map((icon) => CustomBottomBars(
-                  iconImage: icon.icon,
-                  title: icon.titel,
-                  id: icon.id,
-                  onPressed: () {
-                    //Get.back();
-                    customNavigationController.selectedTabIndex = icon.id;
-                    Get.toNamed(icon.pageName);
-                  },
-                  currentTab: customNavigationController.selectedTabIndex))
-              .toList(),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          physics:
+              BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+          child: Row(
+            children: customNavigationController
+                .getAllTabs()
+                .map((icon) => CustomBottomBars(
+                    iconImage: icon.icon,
+                    title: icon.titel,
+                    id: icon.id,
+                    onPressed: () {
+                      //Get.back();
+                      customNavigationController.selectedTabIndex = icon.id;
+                      Get.toNamed(icon.pageName);
+                    },
+                    currentTab: customNavigationController.selectedTabIndex))
+                .toList(),
+          ),
         ),
       ),
     );
