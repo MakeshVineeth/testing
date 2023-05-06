@@ -22,11 +22,6 @@ class CustomUserCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // Image.asset(
-            //   'assets/images/${userImg}', // replace with network image
-            //   width: 96.0,
-            //   height: 96.0,
-            // ),
             Image.network(
               userImg, // replace with network image
               width: 96.0,

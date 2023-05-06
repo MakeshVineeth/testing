@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:mental_health_care_app/auth/application/auth_controller.dart';
 import 'package:mental_health_care_app/core/theme/custom_texts.dart';
 import 'package:mental_health_care_app/home/model/psychologist_model.dart';
@@ -53,23 +54,28 @@ class HomeController extends GetxController
   }
 
   Future<void> getRealDatas() async {
-    Future<QuerySnapshot<Map<String, dynamic>>> firebasePsychologists =
+    Future<QuerySnapshot<Map<String?, dynamic>>> firebasePsychologists =
         _db.collection('psychologists').get();
+
     List<PsychologistModel> allPsychologists =
         await firebasePsychologists.then((value) {
       if (value.size > 0) {
         return value.docs.map((documentSnap) {
-          if (documentSnap.exists) {
-            return PsychologistModel.fromMap(
-              documentSnap.data(),
-              uid: documentSnap.id,
-            );
+          try {
+            if (documentSnap.exists) {
+              return PsychologistModel.fromMap(
+                documentSnap.data(),
+                uid: documentSnap.id,
+              );
+            }
+          } catch (e) {
+            debugPrint(e.toString());
           }
 
           return PsychologistModel(
             uid: 'uid',
             name: 'name',
-            userImage: 'Placeholder.png',
+            userImage: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
             experience: 0,
             star: 0,
             earlyAdmit: 'earlyAdmit',
